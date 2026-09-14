@@ -12,4 +12,18 @@ class Dashboard extends BaseController
 
         return view('dashboard/index', $data);
     }
+
+    public function logout()
+    {
+        session()->remove([
+            'isLoggedIn',
+            'user_id',
+            'role'
+        ]);
+
+        session()->setFlashdata('success', 'Anda berhasil logout');
+
+        return redirect()
+            ->to('/');
+    }
 }

@@ -21,6 +21,8 @@ use Psr\Log\LoggerInterface;
  */
 abstract class BaseController extends Controller
 {
+    //deklarasi variabel session
+    protected $session;
     /**
      * Instance of the main Request object.
      *
@@ -35,7 +37,7 @@ abstract class BaseController extends Controller
      *
      * @var list<string>
      */
-    protected $helpers = [];
+    protected $helpers = ['form'];
 
     /**
      * Be sure to declare properties for any property fetch you initialized.
@@ -48,6 +50,8 @@ abstract class BaseController extends Controller
      */
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
     {
+        //memanggil fungsi session
+        $this->session = session();
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
 

@@ -8,7 +8,7 @@
 /* style untuk halaman login */
 #login-body
 {
- background: url('../img/background_login.jpg');
+ background: url('../img/luffi.jpg');
  background-size: cover;
  background-position: center;
  background-repeat: no-repeat;
@@ -19,7 +19,7 @@
 {
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     margin-right: 30px;
 }
@@ -27,17 +27,17 @@
 {
 background: transparent;
     padding: 35px 20px;
-    height: 300px;
+    min-height: 300px;
     width: 400px;
     /* Kunci Efek Transparan (Glassmorphism) */
-  backdrop-filter: blur(5px);                  /* Efek blur pada latar belakang kaca */
+  backdrop-filter: blur(3px);                  /* Efek blur pada latar belakang kaca */
   
   /* Bingkai halus & Sudut melengkung */
   border: 1px solid rgba(255, 255, 255, 0.25);  /* Bingkai putih tipis semi-transparan */
   border-radius: 15px;                          /* Sudut melengkung modern */
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   
-  color: rgb(56, 56, 56, 0.8);
+  color: rgb(10, 10, 10);
 }
 .form-login .peringatan-email
 {
@@ -46,5 +46,9 @@ background: transparent;
 }
 .form-login label{
     font-weight: 500;
+}
+.form-login .invalid-feedback
+{
+    font-size: small;
 }
 /* akhir style halaman login */

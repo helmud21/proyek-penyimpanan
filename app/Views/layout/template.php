@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $judul; ?></title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css'); ?> ">
+    <link rel="stylesheet" href="<?= base_url('css/style.css'); ?>">
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary .text-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="<?= base_url('/dashboard'); ?> ">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,6 +28,17 @@
                     </li>
                 </ul>
             </div>
+            <?php if (session()->get('isLoggedIn')) : ?>
+
+                <div class="ms-auto">
+                    <a
+                        href="<?= base_url('logout'); ?>"
+                        class="btn btn-danger">
+                        Logout
+                    </a>
+                </div>
+
+            <?php endif; ?>
         </div>
     </nav>
     <?= $this->renderSection('konten'); ?>

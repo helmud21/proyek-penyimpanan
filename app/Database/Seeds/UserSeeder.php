@@ -14,6 +14,7 @@ class UserSeeder extends Seeder
                 'nama' => 'Admin',
                 'email' => 'admin@gmail.com',
                 'password' => password_hash('admin', PASSWORD_DEFAULT),
+                'role' => 'admin',
                 'created_at' => Time::now(),
                 'updated_at' => Time::now()
             ],
@@ -21,6 +22,7 @@ class UserSeeder extends Seeder
                 'nama' => 'Helmud Panggabean',
                 'email' => 'helmudgabe@gmail.com',
                 'password' => password_hash('dragonkick', PASSWORD_DEFAULT),
+                'role' => 'ceo',
                 'created_at' => Time::now(),
                 'updated_at' => Time::now()
             ]
