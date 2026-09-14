@@ -19,6 +19,8 @@ class Login extends BaseController
             'judul' => 'Halaman Dashboard'
         ];
 
+
+
         return view('dashboard/index', $data);
     }
 }
