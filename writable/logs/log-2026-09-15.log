@@ -1,0 +1,207 @@
+INFO - 2026-09-15 05:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 05:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:15:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:15:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:17:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:17:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:18:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:19:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:20:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:21:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:21:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:22:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 06:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-09-15 11:41:08 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\proyek-penyimpanan\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\proyek-penyimpanan\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'proyek_penyimpa...', 3306, '', 0)
+#1 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\proyek-penyimpanan\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\xampp\htdocs\proyek-penyimpanan\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\xampp\htdocs\proyek-penyimpanan\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\proyek-penyimpanan\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\proyek-penyimpanan\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\proyek-penyimpanan\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\proyek-penyimpanan\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\proyek-penyimpanan\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\xampp\htdocs\proyek-penyimpanan\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\htdocs\proyek-penyimpanan\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\xampp\htdocs\proyek-penyimpanan\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#10 C:\xampp\htdocs\proyek-penyimpanan\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 C:\xampp\htdocs\proyek-penyimpanan\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+ERROR - 2026-09-15 11:49:46 --> mysqli_sql_exception: Unknown table 'proyek_penyimpanan.barang' in C:\xampp\htdocs\proyek-penyimpanan\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\proyek-penyimpanan\system\Database\MySQLi\Connection.php(312): mysqli->query('DROP TABLE `bar...', 0)
+#1 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `bar...')
+#2 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `bar...')
+#3 C:\xampp\htdocs\proyek-penyimpanan\system\Database\Forge.php(663): CodeIgniter\Database\BaseConnection->query('DROP TABLE `bar...')
+#4 C:\xampp\htdocs\proyek-penyimpanan\app\Database\Migrations\2026-09-15-072753_Barang.php(49): CodeIgniter\Database\Forge->dropTable('barang')
+#5 C:\xampp\htdocs\proyek-penyimpanan\system\Database\MigrationRunner.php(867): App\Database\Migrations\Barang->down()
+#6 C:\xampp\htdocs\proyek-penyimpanan\system\Database\MigrationRunner.php(290): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 C:\xampp\htdocs\proyek-penyimpanan\system\Commands\Database\MigrateRollback.php(101): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 C:\xampp\htdocs\proyek-penyimpanan\system\Commands\Database\MigrateRefresh.php(86): CodeIgniter\CLI\BaseCommand->call('migrate:rollbac...', Array)
+#11 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 C:\xampp\htdocs\proyek-penyimpanan\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#14 C:\xampp\htdocs\proyek-penyimpanan\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 C:\xampp\htdocs\proyek-penyimpanan\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+ERROR - 2026-09-15 11:53:33 --> mysqli_sql_exception: Table 'proyek_penyimpanan.barang' doesn't exist in C:\xampp\htdocs\proyek-penyimpanan\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\proyek-penyimpanan\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', NULL, false)
+#4 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\proyek-penyimpanan\app\Database\Seeds\BarangSeeder.php(30): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\proyek-penyimpanan\system\Database\Seeder.php(147): App\Database\Seeds\BarangSeeder->run()
+#7 C:\xampp\htdocs\proyek-penyimpanan\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 C:\xampp\htdocs\proyek-penyimpanan\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\proyek-penyimpanan\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\proyek-penyimpanan\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2026-09-15 11:54:30 --> mysqli_sql_exception: Table 'proyek_penyimpanan.barang' doesn't exist in C:\xampp\htdocs\proyek-penyimpanan\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\proyek-penyimpanan\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', NULL, false)
+#4 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\proyek-penyimpanan\app\Database\Seeds\BarangSeeder.php(30): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\proyek-penyimpanan\system\Database\Seeder.php(147): App\Database\Seeds\BarangSeeder->run()
+#7 C:\xampp\htdocs\proyek-penyimpanan\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 C:\xampp\htdocs\proyek-penyimpanan\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\proyek-penyimpanan\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\proyek-penyimpanan\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2026-09-15 11:57:54 --> mysqli_sql_exception: Table 'proyek_penyimpanan.barang' doesn't exist in C:\xampp\htdocs\proyek-penyimpanan\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\proyek-penyimpanan\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', NULL, false)
+#4 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\proyek-penyimpanan\app\Database\Seeds\BarangSeeder.php(30): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\proyek-penyimpanan\system\Database\Seeder.php(147): App\Database\Seeds\BarangSeeder->run()
+#7 C:\xampp\htdocs\proyek-penyimpanan\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 C:\xampp\htdocs\proyek-penyimpanan\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\proyek-penyimpanan\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\proyek-penyimpanan\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2026-09-15 11:59:07 --> mysqli_sql_exception: Unknown table 'proyek_penyimpanan.barang' in C:\xampp\htdocs\proyek-penyimpanan\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\proyek-penyimpanan\system\Database\MySQLi\Connection.php(312): mysqli->query('DROP TABLE `bar...', 0)
+#1 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `bar...')
+#2 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `bar...')
+#3 C:\xampp\htdocs\proyek-penyimpanan\system\Database\Forge.php(663): CodeIgniter\Database\BaseConnection->query('DROP TABLE `bar...')
+#4 C:\xampp\htdocs\proyek-penyimpanan\app\Database\Migrations\2026-09-15-072753_Barang.php(49): CodeIgniter\Database\Forge->dropTable('barang')
+#5 C:\xampp\htdocs\proyek-penyimpanan\system\Database\MigrationRunner.php(867): App\Database\Migrations\Barang->down()
+#6 C:\xampp\htdocs\proyek-penyimpanan\system\Database\MigrationRunner.php(290): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 C:\xampp\htdocs\proyek-penyimpanan\system\Commands\Database\MigrateRollback.php(101): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 C:\xampp\htdocs\proyek-penyimpanan\system\Commands\Database\MigrateRefresh.php(86): CodeIgniter\CLI\BaseCommand->call('migrate:rollbac...', Array)
+#11 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 C:\xampp\htdocs\proyek-penyimpanan\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#14 C:\xampp\htdocs\proyek-penyimpanan\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 C:\xampp\htdocs\proyek-penyimpanan\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+ERROR - 2026-09-15 12:14:26 --> mysqli_sql_exception: Unknown table 'proyek_penyimpanan.barang' in C:\xampp\htdocs\proyek-penyimpanan\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\proyek-penyimpanan\system\Database\MySQLi\Connection.php(312): mysqli->query('DROP TABLE `bar...', 0)
+#1 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `bar...')
+#2 C:\xampp\htdocs\proyek-penyimpanan\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `bar...')
+#3 C:\xampp\htdocs\proyek-penyimpanan\system\Database\Forge.php(663): CodeIgniter\Database\BaseConnection->query('DROP TABLE `bar...')
+#4 C:\xampp\htdocs\proyek-penyimpanan\app\Database\Migrations\2026-09-15-072753_Barang.php(49): CodeIgniter\Database\Forge->dropTable('barang')
+#5 C:\xampp\htdocs\proyek-penyimpanan\system\Database\MigrationRunner.php(867): App\Database\Migrations\Barang->down()
+#6 C:\xampp\htdocs\proyek-penyimpanan\system\Database\MigrationRunner.php(290): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 C:\xampp\htdocs\proyek-penyimpanan\system\Commands\Database\MigrateRollback.php(101): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 C:\xampp\htdocs\proyek-penyimpanan\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 C:\xampp\htdocs\proyek-penyimpanan\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\proyek-penyimpanan\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\proyek-penyimpanan\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+INFO - 2026-09-15 14:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 14:13:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 14:13:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 14:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 14:14:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 14:14:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 14:18:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 14:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 14:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 14:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:21:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:21:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:21:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:21:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:21:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:39:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:48:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:51:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:58:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 15:59:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 16:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-09-15 16:01:25 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<"
+[Method: GET, Route: %3C]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('<')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('<')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2026-09-15 16:03:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 16:03:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 16:05:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 16:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 16:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-09-15 16:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

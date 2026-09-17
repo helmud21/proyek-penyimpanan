@@ -19,7 +19,6 @@ class Login extends BaseController
     public function login()
     {
         //validasi email dan password
-
         if (!$this->validate([
             'email' => [
                 'rules' => 'required|valid_email',

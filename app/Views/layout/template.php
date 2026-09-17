@@ -8,6 +8,9 @@
 
     <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css'); ?> ">
     <link rel="stylesheet" href="<?= base_url('css/style.css'); ?>">
+    <link
+        rel="stylesheet"
+        href="https://cdn.datatables.net/2.3.3/css/dataTables.dataTables.min.css">
 
 </head>
 
@@ -42,6 +45,14 @@
         </div>
     </nav>
     <?= $this->renderSection('konten'); ?>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/2.3.3/js/dataTables.min.js"></script>
+    <script src="<?= base_url('script/bootstrap.bundle.min.js'); ?>"></script>
+    <script>
+        const BASE_URL = '<?= base_url(); ?>';
+    </script>
+    <script src="<?= base_url('script/javascript.js'); ?>"></script>
 </body>
 
 </html>
