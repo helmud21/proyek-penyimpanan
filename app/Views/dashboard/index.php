@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col">
             <h1 class="text-center mt-2">Dashboard Penyimpanan</h1>
-            <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalBarang">
+            <button type="button" id="btnTambahData" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalBarang">
                 Tambah Data Barang
             </button>
             <!-- jika data berhasil ditambahkan muncul pesan sukses -->
@@ -13,9 +13,9 @@
                     <?= session()->get('success'); ?>
                 </div>
             <?php endif; ?>
-            <div id="alertSuccess" class="alert alert-success d-none my-2" role="alert">
+            <div id="alertSuccess" class="alert alert-success d-none my-2 text-center" role="alert">
                 <i class="bi bi-check-circle"></i>
-                <span id="alertSukses"></span>
+                <span id="alertSuccessMessage"></span>
             </div>
             <table id="tabelDashboardAdmin" class="display">
                 <thead>
@@ -24,21 +24,24 @@
                         <th>Nama Barang</th>
                         <th>Kategori Barang</th>
                         <th>Jumlah Barang</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
+                <tbody></tbody>
             </table>
 
-            <!-- Modal -->
+            <!-- Modal form tambah/edit data barang-->
             <div class="modal fade" id="modalBarang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Form Tambah Data Barang</h5>
+                            <h5 class="modal-title" id="judulModal">Form Tambah Data Barang</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <form id="formBarang" class="form-barang">
                                 <?= csrf_field(); ?>
+                                <input type="hidden" id="id_barang" name="id_barang">
                                 <div class="mb-3">
                                     <label for="nama_barang" class="form-label">Nama Barang</label>
                                     <input type="text" class="form-control" id="nama_barang" name="nama_barang" autofocus value="<?= old('nama_barang'); ?>">
@@ -58,9 +61,32 @@
                             </form>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                                <button type="submit" form="formBarang" class="btn btn-primary">Tambah Barang</button>
+                                <button type="submit" form="formBarang" class="btn btn-primary" id="btnSubmitAdmin">Tambah Barang</button>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal konfirmasi hapus data barang -->
+            <div class="modal fade" id="modalKonfirmasiHapus" tabindex="-1" aria-labelledby="judulModalHapus" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="judulModalHapus">Konfirmasi Hapus</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="mb-0">
+                                Apakah Anda yakin ingin menghapus data barang ini?
+                            </p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                            <button type="button" class="btn btn-danger" id="btnKonfirmasiHapus">Hapus</button>
+                        </div>
+
                     </div>
                 </div>
             </div>
