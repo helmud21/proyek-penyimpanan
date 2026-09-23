@@ -14,6 +14,11 @@ $(document).ready(function () {
         btnSubmitAdmin.text('Tambah Data');
         formBarang[0].reset();
         $('#id_barang').val('');
+
+        // Reset preview gambar
+        $('#namaFileGambar').text('');
+        $('#previewGambar').attr('src', '');
+        $('#previewGambarWrapper').addClass('d-none');
     });
 
     // inisiasi datatables ke dalam variabel tabel
@@ -44,6 +49,20 @@ $(document).ready(function () {
     },
     {
         data: 'jumlah'
+    },
+    {
+        data: 'gambar',
+        orderable: false,
+        searchable: false,
+        render: function(data, type, row){
+            if(!data){
+                return 'Tidak ada gambar';
+            }
+
+            return `
+                <img src="${BASE_URL}img/${data}" alt="${row.nama_barang}" width="60" height="60" style="object-fit: cover;" class="rounded">
+            `;
+        }
     },
     {
         // generate tombol edit dan delete
@@ -89,6 +108,16 @@ $(document).ready(function () {
                         $('#jumlah').val(
                             response.data.jumlah
                         );
+
+                        if(response.data.gambar){
+                            $('#namaFileGambar').text(response.data.gambar);
+                            $('#previewGambar').attr('src', BASE_URL + 'img/' + response.data.gambar);
+                            $('#previewGambarWrapper').removeClass('d-none');
+                        }else{
+                            $('#namaFileGambar').text('');
+                            $('#previewGambar').attr('src', '');
+                            $('#previewGambarWrapper').addClass('d-none');
+                        }
 
                         judulModal.text('Form Ubah Data Barang');
                         btnSubmitAdmin.text('Ubah Data');

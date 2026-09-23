@@ -24,6 +24,7 @@
                         <th>Nama Barang</th>
                         <th>Kategori Barang</th>
                         <th>Jumlah Barang</th>
+                        <th>Gambar Barang</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>

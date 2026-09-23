@@ -72,13 +72,13 @@ class BarangController extends BaseController
         }
 
         // Variabel untuk menampung nama file gambar barang
-        $namaBaru = 'default.png';
+        $namaBaruGambar = 'default.png';
         $file = $this->request->getFile('gambar');
 
         if ($file && $file->isValid() && !$file->hasMoved()) {
-            $namaBaru = $file->getRandomName();
+            $namaBaruGambar = $file->getRandomName();
 
-            $file->move(FCPATH . 'img', $namaBaru);
+            $file->move(FCPATH . 'img', $namaBaruGambar);
         }
 
         // Data yang akan diisikan ke database
@@ -87,7 +87,7 @@ class BarangController extends BaseController
             'nama_barang'   => $this->request->getPost('nama_barang'),
             'kategori'      => $this->request->getPost('kategori'),
             'jumlah'        => $this->request->getPost('jumlah'),
-            'gambar'        => $namaBaru
+            'gambar'        => $namaBaruGambar,
         ];
 
         // Simpan data barang ke database
@@ -183,13 +183,27 @@ class BarangController extends BaseController
             ]);
         }
 
+        $namaBaruGambar = $barang['gambar'];
+        $file = $this->request->getFile('gambar');
+
+        if ($file && $file->isValid() && !$file->hasMoved()) {
+            $namaBaruGambar = $file->getRandomName();
+
+            $file->move(FCPATH . 'img', $namaBaruGambar);
+
+            if ($barang['gambar'] != 'default.png' && file_exists(FCPATH . 'img/' . $barang['gambar'])) {
+                unlink(FCPATH . 'img/' . $barang['gambar']);
+            }
+        }
+
+
         // Data yang akan diisikan ke database
         // Sesuaikan nama kolom yang akan diisi di database (kiri) dengan value yang didapat dari form (kanan)
         $data = [
             'nama_barang'   => $this->request->getPost('nama_barang'),
             'kategori'      => $this->request->getPost('kategori'),
             'jumlah'        => $this->request->getPost('jumlah'),
-            'gambar'        => ''
+            'gambar'        => $namaBaruGambar
         ];
 
         // Simpan perubahan
