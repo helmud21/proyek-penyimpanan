@@ -14,6 +14,7 @@ class BarangSeeder extends Seeder
                 'nama_barang'   => 'Asus',
                 'kategori'      => 'Elektronik',
                 'jumlah'        => 50,
+                'gambar'        => 'default.png',
                 'created_at' => Time::now(),
                 'updated_at' => Time::now()
 
@@ -22,6 +23,7 @@ class BarangSeeder extends Seeder
                 'nama_barang'   => 'Tas Gucci',
                 'kategori'      => 'Aksesoris',
                 'jumlah'        => 50,
+                'gambar'        => 'default.png',
                 'created_at' => Time::now(),
                 'updated_at' => Time::now()
             ],
@@ -29,6 +31,7 @@ class BarangSeeder extends Seeder
                 'nama_barang'   => 'Pakaian Billabong',
                 'kategori'      => 'Fashion',
                 'jumlah'        => 100,
+                'gambar'        => 'default.png',
                 'created_at' => Time::now(),
                 'updated_at' => Time::now()
             ]

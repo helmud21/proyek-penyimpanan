@@ -33,6 +33,12 @@ class Barang extends Migration
                 'default'    => 0,
             ],
 
+            'gambar' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+                'null'       => true,
+            ],
+
             'created_at' => [
                 'type' => 'DATETIME',
                 'null' => true,

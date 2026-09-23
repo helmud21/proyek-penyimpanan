@@ -105,13 +105,37 @@ $(document).ready(function () {
             });
         });
 
+        // aksi ketika user mengupload gambar
+        $('#gambar').on('change', function(){
+            const file = this.files[0];
+
+            // jika user batal memilih file
+            if(!file){
+                $('#namaFileGambar').text('');
+                $('#previewGambarWrapper').addClass('d-none');
+                $('#previewGambar').attr('src', '');
+
+                return;
+            }
+
+            $('#namaFileGambar').text(file.name);
+
+            const reader = new FileReader();
+            reader.onload = function(event){
+                $('#previewGambar').attr('src', event.target.result);
+                $('#previewGambarWrapper').removeClass('d-none');
+            }
+
+            reader.readAsDataURL(file);
+        });
+
         // mengirimkan data dari form tambah data ke controller
         $('#formBarang').on('submit', function(event){
             event.preventDefault();
             // Membersihkan error sebelumnya
             $('.form-control').removeClass('is-invalid');
             $('.invalid-feedback').text('');
-            const formData = $(this).serialize();
+            const formData = new FormData(this);
             // console.log('submit berhasil');
             const url = formBarang.attr('action');
             // request ajax untuk mengirimkan value dari input form ke controller
@@ -119,6 +143,8 @@ $(document).ready(function () {
                 url:  url,
                 type: 'POST',
                 data: formData,
+                processData: false,
+                contentType: false,
 
             success: function (response) {
                 console.log(response);
@@ -171,6 +197,13 @@ $(document).ready(function () {
                         .addClass('is-invalid');
                     $('#errorJumlah')
                         .text(errors.jumlah);
+                }
+
+                if (errors.gambar) {
+                    $('#gambar')
+                        .addClass('is-invalid');
+                    $('#errorGambar')
+                        .text(errors.gambar);
                 }
                 }
             }

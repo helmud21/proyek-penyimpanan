@@ -7,7 +7,7 @@
             <button type="button" id="btnTambahData" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalBarang">
                 Tambah Data Barang
             </button>
-            <!-- jika data berhasil ditambahkan muncul pesan sukses -->
+            <!-- Jika data berhasil ditambahkan/diubah/delete menampilkan pesan sukses -->
             <?php if (session()->get('success')) : ?>
                 <div class="alert alert-success">
                     <?= session()->get('success'); ?>
@@ -39,7 +39,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form id="formBarang" class="form-barang">
+                            <form id="formBarang" class="form-barang" enctype="multipart/form-data">
                                 <?= csrf_field(); ?>
                                 <input type="hidden" id="id_barang" name="id_barang">
                                 <div class="mb-3">
@@ -56,6 +56,15 @@
                                     <label for="jumlah" class="form-label">Jumlah Barang</label>
                                     <input type="number" class="form-control" id="jumlah" name="jumlah" min="0" value="<?= old('jumlah'); ?>">
                                     <div id="errorJumlah" class="invalid-feedback"></div>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="file" class="form-control d-none" id="gambar" name="gambar" value="<?= old('gambar'); ?>">
+                                    <label for="gambar" class="btn btn-secondary">Pilih Gambar</label>
+                                    <span id="namaFileGambar" class="ms-2"> . . . </span>
+                                    <div id="errorGambar" class="invalid-feedback"></div>
+                                </div>
+                                <div class="mt-2 d-none" id="previewGambarWrapper">
+                                    <img id="previewGambar" class="img-thumbnail" src="" alt="Preview gambar" style="max-height: 200px; max-width: 200px;">
                                 </div>
 
                             </form>
